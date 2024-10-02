@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://bncmjy6haf8q7"]
+
+[ext_resource type="Texture2D" uid="uid://hd0xp8lf8x8g" path="res://Objects/Lighthouse/Lighthouse.png" id="1_bg8ai"]
+[ext_resource type="Script" path="res://game_world.gd" id="2_mjxno"]
+[ext_resource type="Script" path="res://Objects/Lighthouse/lighthouse.gd" id="3_tyt7k"]
+[ext_resource type="Texture2D" uid="uid://bor80mjjjcygv" path="res://Objects/Lighthouse/Lightbeam.png" id="4_mcila"]
+[ext_resource type="Script" path="res://minigame.gd" id="5_y2q4p"]
+
+[node name="Main" type="Node"]
+
+[node name="GameWorld" type="Node2D" parent="."]
+script = ExtResource("2_mjxno")
+
+[node name="Lighthouse" type="Node2D" parent="GameWorld"]
+position = Vector2(320, 320)
+script = ExtResource("3_tyt7k")
+
+[node name="Lighthouse" type="Sprite2D" parent="GameWorld/Lighthouse"]
+texture = ExtResource("1_bg8ai")
+
+[node name="Lightbeam" type="Sprite2D" parent="GameWorld/Lighthouse"]
+texture = ExtResource("4_mcila")
+offset = Vector2(25, 25)
+
+[node name="Camera2D" type="Camera2D" parent="GameWorld/Lighthouse"]
+
+[node name="Minigame" type="CanvasLayer" parent="."]
+script = ExtResource("5_y2q4p")
+
+[node name="MarginContainer" type="MarginContainer" parent="Minigame"]
+offset_right = 99.0
+offset_bottom = 63.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Minigame/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Souls: 0"
+
+[node name="Menu" type="CanvasLayer" parent="."]

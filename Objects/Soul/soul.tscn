@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://51kp7dfqvdj3"]
+
+[ext_resource type="Script" path="res://Objects/Soul/soul.gd" id="1_rrp6u"]
+[ext_resource type="Texture2D" uid="uid://cfscmx2d3koir" path="res://Objects/Soul/Soul.png" id="2_7coij"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ke74"]
+radius = 4.0
+
+[node name="Soul" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_rrp6u")
+
+[node name="Soul_sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_7coij")
+
+[node name="Soul_collision" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_0ke74")
