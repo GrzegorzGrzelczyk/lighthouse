@@ -34,7 +34,7 @@
 			"uuid": "d4296965-9d83-4e55-8891-3efa7be1df2b",
 			"title": "Doing",
 			"tasks": [
-				"069d147e-58ca-43a5-88e5-3565bbdaa54b"
+				"f677b67d-296c-4920-a0da-82dbd4424319"
 			]
 		},
 		{
@@ -46,7 +46,8 @@
 				"492f7d52-5e49-4f64-8d25-5cb64fd806bd",
 				"28dc3380-05af-4e72-889a-ca79a9490790",
 				"9b7dae75-ea55-40f2-ad83-52b96d769c87",
-				"4f81ce92-8619-4cc1-ad0f-1ee24d351e90"
+				"4f81ce92-8619-4cc1-ad0f-1ee24d351e90",
+				"069d147e-58ca-43a5-88e5-3565bbdaa54b"
 			]
 		}
 	],
@@ -60,7 +61,7 @@
 		},
 		{
 			"uuid": "069d147e-58ca-43a5-88e5-3565bbdaa54b",
-			"title": "Minigame interface",
+			"title": "Minigame - interface",
 			"description": "",
 			"category": "836783e4-0c72-41d4-9ed9-b8276c1595ab",
 			"steps": []
@@ -147,6 +148,13 @@
 			"title": "Make souls despawn at a certain distance instead of a timer.",
 			"description": "Probably 4x360",
 			"category": "b4bd1708-d19f-45b3-b3d7-c257a80b7496",
+			"steps": []
+		},
+		{
+			"uuid": "f677b67d-296c-4920-a0da-82dbd4424319",
+			"title": "Minigame - cards spawning and pointer interaction.",
+			"description": "",
+			"category": "836783e4-0c72-41d4-9ed9-b8276c1595ab",
 			"steps": []
 		}
 	],

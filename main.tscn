@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bncmjy6haf8q7"]
+[gd_scene load_steps=8 format=3 uid="uid://bncmjy6haf8q7"]
 
 [ext_resource type="Texture2D" uid="uid://hd0xp8lf8x8g" path="res://Objects/Lighthouse/Lighthouse.png" id="1_bg8ai"]
 [ext_resource type="Script" path="res://game_world.gd" id="2_mjxno"]
 [ext_resource type="Script" path="res://Objects/Lighthouse/lighthouse.gd" id="3_tyt7k"]
 [ext_resource type="Texture2D" uid="uid://bor80mjjjcygv" path="res://Objects/Lighthouse/Lightbeam.png" id="4_mcila"]
 [ext_resource type="Script" path="res://minigame.gd" id="5_y2q4p"]
+[ext_resource type="Texture2D" uid="uid://bd2exwc3nfqtp" path="res://Objects/Minigame/WhitePixel.png" id="6_hbbr0"]
+[ext_resource type="Texture2D" uid="uid://d3dqeo1gse85s" path="res://Objects/Minigame/Gamebar_Warmup.png" id="7_8rpuo"]
 
 [node name="Main" type="Node"]
 
@@ -41,5 +43,43 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Souls: 0"
+
+[node name="MinigameMargin" type="MarginContainer" parent="Minigame"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -67.0
+offset_right = 22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 40
+
+[node name="Pointer" type="TextureProgressBar" parent="Minigame/MinigameMargin"]
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 2
+max_value = 400.0
+value = 1.0
+nine_patch_stretch = true
+texture_progress = ExtResource("6_hbbr0")
+
+[node name="Warmup" type="NinePatchRect" parent="Minigame/MinigameMargin"]
+custom_minimum_size = Vector2(100, 1)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("7_8rpuo")
+axis_stretch_horizontal = 1
+
+[node name="Playpart" type="NinePatchRect" parent="Minigame/MinigameMargin"]
+custom_minimum_size = Vector2(100, 1)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("6_hbbr0")
 
 [node name="Menu" type="CanvasLayer" parent="."]
